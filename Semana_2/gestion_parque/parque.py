@@ -1,7 +1,7 @@
 def mostrar_atracciones():
     print("tenemos las siguiente atracciones: Montaña Rusa, Casa del Terror y Carrusel")
     
-def puede_subir(edad, atraccion):
+def puede_subir(edad:int, atraccion:str):
     if edad >= 12 and atraccion == "rusa":
         return True
     elif edad > 7 and atraccion == "casaterror":
@@ -33,6 +33,7 @@ def calcular_precio(atraccion):
 def registrar_visita():
     nombre= str(input("Nombre del visitante: "))
     edad= int(input("Edad del visitante: "))
+    resumen= nombre + " " + edad
 
     return resumen
 
