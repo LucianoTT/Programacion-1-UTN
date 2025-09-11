@@ -4,7 +4,7 @@
 
 numeros_enteros= [1,2,3,4,5,6,7,8,9,10]
 suma_total= 0
-for num in numeros_enteros:
-    suma_total += num
+for num in range(len(numeros_enteros)):
+    suma_total += numeros_enteros[num]
 
 print(f"La suma de los números enteros es {suma_total}.")

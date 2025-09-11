@@ -4,8 +4,8 @@
 
 numeros_reales= [1.0, 2.0, 3.0, 4.0, 5.0, 6.0]
 suma_total= 0.0
-for num in numeros_reales:
-    suma_total += num
+for num in range(len(numeros_reales)):
+    suma_total += numeros_reales[num]
     promedio= suma_total / len(numeros_reales)
 
 print(f"La suma de los números reales {suma_total} y su promedio es {promedio}.")

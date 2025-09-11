@@ -3,5 +3,5 @@
 #    por pantalla usando un ciclo for.
 
 numeros_enteros= [1, 2, 3, 4, 5]
-for num  in numeros_enteros:
-    print (num)
+for num  in range(len(numeros_enteros)):
+    print (numeros_enteros[num])
