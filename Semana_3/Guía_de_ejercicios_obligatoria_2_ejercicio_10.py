@@ -7,12 +7,10 @@ def primer_aparicion(numeros_enteros, a_buscar):
     for num in range(len(numeros_enteros)):
         if numeros_enteros[num] == a_buscar:
             pos = num
-            print(pos)
             return pos
 
     if pos == None:
-        print("-1")
         return -1
 
 
-primer_aparicion([2,7,8,23,6,10,6,87,7], 88)
+primer_aparicion([2,7,8,23,6,10,6,87,7], 6)

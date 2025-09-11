@@ -7,4 +7,4 @@ for num in range(len(numeros_enteros)):
     if numeros_enteros[num] > 100:
         contador +=1
 
-print(f"La cantidad de números mayores a 100 en las lista es: {contador}.")
+print(f"La cantidad de números mayores a 100 en la lista es: {contador}.")
