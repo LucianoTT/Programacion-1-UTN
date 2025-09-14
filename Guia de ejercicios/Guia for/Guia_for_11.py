@@ -9,7 +9,6 @@ total= ""
 for num in range(1, numero_ingresado+1, 1):
     valor_temporal= num
     if num == 3 or num == 2 or num == 5 or num == 7:
-        print("entro")
         total= total + str(num)+(", ")
     elif valor_temporal % 2 != 0 and num != 2 and valor_temporal % 3 != 0 and valor_temporal % 5 != 0 and valor_temporal % 7 != 0:
         total = total + str(num)+(", ")
