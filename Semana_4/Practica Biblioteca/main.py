@@ -1,6 +1,6 @@
 import funciones
-titulos= [""] *3
-ejemplares= [0] * 3
+titulos= [""] *20
+ejemplares= [0] * 20
 
 while True:
     print ("1.Cargar titulos y ejemplares")
@@ -15,22 +15,22 @@ while True:
 
     if opcion == 1:
         funciones.load_titulos(titulos, ejemplares)
-        print(f" {titulos} / {ejemplares}")
-
 
     if opcion == 2:
         funciones.show_catalogo(titulos, ejemplares)
+
     if opcion == 3:
-        pass
+        funciones.disponibilidad(titulos, ejemplares)
+
     if opcion == 4:
-        print(ejemplares)
         funciones.agotados(titulos, ejemplares)
+
     if opcion == 5:
-        pass
+        funciones.nuevo_titulo(titulos,ejemplares)
+
     if opcion == 6:
-        pass
+        funciones.act_ejemplares(titulos,ejemplares)
+
     if opcion == 7:
         print("Hasta luego")
         break
-    else:
-        print("Opcion invalida")
