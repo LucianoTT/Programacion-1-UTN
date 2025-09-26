@@ -41,9 +41,5 @@ for k in range(FILAS):
 
     
 promedio_semana= suma_de_la_semana / FILAS
-
-#for dias in range(FILAS):
-#    print(f"El dia {DIAS[k]} tuvo un promedio de {promedio_dia}. ")
-
 print(f"El promedio de la semana es {promedio_semana}")
 
