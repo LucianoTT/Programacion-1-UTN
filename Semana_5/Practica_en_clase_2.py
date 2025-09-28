@@ -3,7 +3,7 @@
 # Cargar en una matriz 4x5 los puntajes obtenidos (enteros). Luego mostrar:
 #    El puntaje total de cada equipo.
 #    Qué equipo obtuvo el mayor puntaje en total.
-
+#-----------------------------------------------------------------------------------
 COLUMNAS= 5 
 FILAS= 4
 suma_ronda= 0
@@ -14,7 +14,7 @@ mat= [[0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0],
     ]
-
+#------------------------ingresar puntajes--------------------------------
 for i in range(FILAS):
     for n in range(COLUMNAS):
         valor= False
@@ -22,12 +22,11 @@ for i in range(FILAS):
             puntaje = int(input(f"Digame el puntaje de la ronda {n+1} para el equipo {i+1}: "))
             mat[i][n] = puntaje
             valor = True
-
+#------------------------calculo totales----------------------------
 for equipo in range(FILAS):
     suma_ronda = 0
     for puntos in range(COLUMNAS):
         valor= False
-
         while valor == False:
             suma_ronda += mat[equipo][puntos]
             valor = True

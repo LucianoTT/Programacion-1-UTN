@@ -4,29 +4,35 @@
 #    La producción total de cada producto.
 #    La producción total de cada día.
 #    Cuál fue el día con mayor producción total.
-
+#---------------------------------------------------------------------
 COLUMNAS= 4
 FILAS= 3
-total_dia= 0
+matriz= [[0] * COLUMNAS for _ in range(FILAS)]
+mayor_produccion= 0
+#----------------------Introducir datos-------------------------------
 
-mat= [[0, 0, 0, 0],
-      [0, 0, 0, 0],
-      [0, 0, 0, 0],
-    ]
+for p in range(FILAS):
+    for d in range(COLUMNAS):
+        matriz[p][d] = int(input(f"Digame lo producido del dia {d+1} para el producto {p+1} :"))
+#-------------------------suma total productos--------------------------
+for t in range(FILAS):
+    suma_total_productos= 0
+    for x in range(COLUMNAS):
+        suma_total_productos += matriz[t][x]
+    print(f"Se produjo un total de: {suma_total_productos}, del producto {t+1}. ")
+#--------------------------suma total productos del dia-------------------
+for y in range(COLUMNAS):
+    suma_del_dia= 0
+    for n in range(FILAS):
+        suma_del_dia += matriz[n][y]
+    if mayor_produccion < suma_del_dia:
+        mayor_produccion = suma_del_dia
+        dia= y
+    print(f"En el dia {y+1} se produjo un total de {suma_del_dia} de los tres productos.")
+print(f"El dia que mas se produjo fue el dia {dia+1}, con un total de {mayor_produccion} productos")
 
-for n in range(FILAS):
-    prod_total= 0
-    for y in range(COLUMNAS):
-        valor= False
-        while valor == False:
-            producido = int(input(f"Digame la cantidad producida el dia {y+1}: "))
-            mat[n][y]= producido
-            prod_total += producido
-            valor = True
-    #total_dia += mat[n][n]
-    print (f"El producto {n+1} ha producido {prod_total} en total.")
-for d in range(FILAS):
-    total_dia += mat[n][n]
-print(f"el total producido del dia {FILAS} es: {total_dia}. ")
+
+
+
 
     

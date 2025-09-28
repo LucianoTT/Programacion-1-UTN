@@ -6,7 +6,6 @@ lista_comentarios = [""] * 10
 
 def ingresar_participantes(lista_persona, lista_puntuaciones, lista_comentarios):
     for n in range(len(lista_persona)):
-        print(len(lista_persona))
         #Nombre del cliente
         while lista_persona[n] == "":
             lista_persona[n]= str(input("Nombre del cliente: "))
@@ -52,8 +51,7 @@ def puntuaciones_comentarios(lista_persona, lista_puntuaciones, lista_comentario
 def ordenar(lista_persona, lista_puntuaciones, lista_comentarios):
     size= len(lista_persona)    
     for n in range(size):
-
-        for i in range(0, size - 1 - n):
+        for i in range(size - 1 - n):
             if lista_puntuaciones[i] < lista_puntuaciones[i + 1]:
                 lista_persona[i], lista_persona[i + 1] = lista_persona[i + 1], lista_persona[i]
                 lista_puntuaciones[i], lista_puntuaciones[i + 1] = lista_puntuaciones[i + 1], lista_puntuaciones[i]
