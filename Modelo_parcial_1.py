@@ -1,3 +1,4 @@
+max= 10
 lista_persona = [""] * 10
 lista_puntuaciones = [0] * 10
 lista_comentarios = [""] * 10
@@ -49,7 +50,7 @@ def puntuaciones_comentarios(lista_persona, lista_puntuaciones, lista_comentario
     print (f"El promedio de las notas es: {promedio}. ")
 
 def ordenar(lista_persona, lista_puntuaciones, lista_comentarios):
-    size= len(lista_persona)    
+    size= max    
     for n in range(size):
         for i in range(size - 1 - n):
             if lista_puntuaciones[i] < lista_puntuaciones[i + 1]:

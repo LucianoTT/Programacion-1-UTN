@@ -3,14 +3,13 @@
 #------------------------------------------------------------------------------------------
 
 def union(array_1: list, array_2: list):
-    union_array= ""
-    for p in range(len(array_1)):
-        union_array = union_array + " " + str(array_1[p])
-    for n in range(len(array_2)):
-        for n2 in range(len(array_1)):
-            if array_1[n] != array_2[n]:
-                union_array = union_array + " " + str(array_2[n])
-    print (f"La union de ambos arrays es = {union_array}.")
+    union_arrays= array_1
+    for n in  array_2:
+        if n not in union_arrays:
+            union_arrays += [n]
+
+
+    print (f"La union de ambos arrays es = {union_arrays}.")
 
 
 
